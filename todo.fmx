@@ -1,0 +1,83 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  BorderIcons = [biSystemMenu, biMinimize, biMaximize, biHelp]
+  BorderStyle = SizeToolWin
+  Caption = 'Todolist'
+  ClientHeight = 360
+  ClientWidth = 380
+  Fill.Color = xFFF7E2B3
+  Fill.Kind = Solid
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object editor: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 0
+    TextSettings.Font.Family = 'Cambria Math'
+    TextSettings.Font.StyleExt = {00070000000000000004000000}
+    TextSettings.FontColor = claDarkslategray
+    Position.X = 40.000000000000000000
+    Position.Y = 88.000000000000000000
+    Size.Width = 225.000000000000000000
+    Size.Height = 33.000000000000000000
+    Size.PlatformDefault = False
+    StyledSettings = [Size]
+    OnEnter = editorEnter
+  end
+  object addButton: TButton
+    Touch.InteractiveGestures = [Rotate]
+    StyledSettings = [Size]
+    Position.X = 288.000000000000000000
+    Position.Y = 88.000000000000000000
+    Size.Width = 81.000000000000000000
+    Size.Height = 33.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    Text = 'Add to List'
+    TextSettings.Font.Family = 'Cambria Math'
+    TextSettings.Font.StyleExt = {00070000000000000004000000}
+    TextSettings.FontColor = claDarkslategray
+    TextSettings.FontColorForState.Hot = claRed
+    TextSettings.FontColorForState.Focused = claYellowgreen
+    TextSettings.Trimming = None
+    OnClick = addButtonClick
+    object title: TLabel
+      Touch.InteractiveGestures = [Zoom]
+      AutoSize = True
+      StyledSettings = [Size]
+      Position.X = -248.000000000000000000
+      Position.Y = -45.000000000000000000
+      Size.Width = 162.399993896484400000
+      Size.Height = 22.399999618530270000
+      Size.PlatformDefault = False
+      StyleLookup = 'listboxheaderlabel'
+      TextSettings.Font.Family = 'Cambria Math'
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.FontColor = claDarkslategray
+      Text = 'Your To-Do list'
+      TabOrder = 0
+    end
+  end
+  object todolist: TListBox
+    Touch.InteractiveGestures = []
+    Position.X = 40.000000000000000000
+    Position.Y = 144.000000000000000000
+    Size.Width = 225.000000000000000000
+    Size.Height = 200.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'listboxstyle'
+    TabOrder = 2
+    ParentShowHint = False
+    ShowHint = False
+    DisableFocusEffect = True
+    ItemHeight = 0.500000000000000000
+    DefaultItemStyles.ItemStyle = ''
+    DefaultItemStyles.GroupHeaderStyle = ''
+    DefaultItemStyles.GroupFooterStyle = ''
+    OnItemClick = todolistItemClick
+    Viewport.Width = 221.000000000000000000
+    Viewport.Height = 196.000000000000000000
+  end
+end
